@@ -21,8 +21,8 @@ export {
 event http_reply (c: connection, version: string, code: count, reason: string)
   {
   # wp-login.php uses POST variable by default, but can be configured for GET variable
-  # TODO Verify which status codes to track for failed logins, implied .* for type pattern, necessity of/efficiency string match before regex
-  if ( code != 200 && c$http?$method && c$http?$uri && c$http?$host 
+  # TODO Verify if .* is implied for type pattern, necessity of/efficiency of string match before regex
+  if ( code == 200 && c$http?$method && c$http?$uri && c$http?$host 
         && ( (c$http$method == "POST" && "wp-login.php" in c$http$uri && /.*wp-login.php$/ in c$http$uri)
         || (c$http$method == "GET" && "wp-login.php" in c$http$uri && /.*log=.*&pwd=.*/ in c$http$uri) ) )
     SumStats::observe("http.wp_bf", [$host=c$id$orig_h, $str=c$http$host], [$str=c$http$uri]);
