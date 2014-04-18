@@ -13,7 +13,7 @@ export {
 
     # Threshold for processing unique indicators
     const intel_uniq_threshold: double = 1 &redef;
-    # Threshold to meet before sending notice for multiple indicators
+    # Threshold to meet before sending notice for multiple instances of unique indicators
     const intel_mult_threshold: double = 5 &redef;
     # The amount of time to watch a connection for indicators
     # This interval will affect whether or not indicators are missed in a connection
