@@ -16,7 +16,8 @@ export {
     # Threshold to meet before sending notice for multiple indicators
     const intel_mult_threshold: double = 5 &redef;
     # The amount of time to watch a connection for indicators
-    # TODO verify at what time in connection indicators may be seen as this could impact how long to watch for indicators
+    # This interval will affect whether or not indicators are missed in a connection
+    # 3mins is probably enough to catch indicators in most connections
     const intel_interval = 3mins &redef;
 }
 
