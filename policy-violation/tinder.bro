@@ -1,4 +1,5 @@
 # Tinder data is sent unencrypted and can easily be seen and extracted from network traffic
+# This probably isn't actually useful for anyone and is more so just proof of concept for other policy violation-style scripts
 # Josh Liburdi 2014
 
 module PolicyViolation;
