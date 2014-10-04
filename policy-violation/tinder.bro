@@ -32,7 +32,6 @@ if ( tinder_extract_images == T )
 
 event file_new(f: fa_file) &priority=3
 {
-if ( tinder_extract_images == F ) return;
 if ( |extract_tinder_image| == 0 ) return;
 if ( f$info$mime_type != "image/jpeg" ) return;
 
