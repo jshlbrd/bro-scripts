@@ -1,4 +1,4 @@
-# Simple logging of Reddit connections. Extracts and logs sub-reddit, page, and search if found.
+# Basic logging of Reddit connections. Extracts and logs sub-reddit, page, and search if found.
 # liburdi.joshua@gmail.com
 # 2014
 
